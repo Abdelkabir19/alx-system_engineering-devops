@@ -1,11 +1,2 @@
 #!/bin/bash
-# Loop through all the files and directories in the current directory
-for file in ./*
-do
-  # Check if the file is a directory
-  if [ -d "$file" ]
-  then
-    # Add execute permission to the directory for the owner, the group owner and all other users
-    chmod a+x "$file"
-  fi
-done
+sudo find . -type d -exec chmod u+x
